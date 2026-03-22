@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net480</TargetFramework>
+		<PlatformTarget>x64</PlatformTarget>
+
+		<!-- Modify [RootNamespace], [AssemblyName], [OutputPath], [VersionPrefix] -->
+		<RootNamespace></RootNamespace>
+		<AssemblyName>InformationGathering</AssemblyName>
+		<OutputPath>../../../Mods</OutputPath>
+		<VersionPrefix>0.1.0.0</VersionPrefix>
+
+		<!-- Do not generate pdb file -->
+		<DebugType>none</DebugType>
+
+		<DebugSymbols>false</DebugSymbols>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+		<RimWorldPath Condition="'$(RimWorldPath)' == '' AND '$(OS)' == 'Windows_NT'">../../../../TownOfSalem2_Data/Managed</RimWorldPath>
+        <RimWorldPath Condition="'$(RimWorldPath)' == '' AND '$(OS)' != 'Windows_NT'">../../../../TownOfSalem2_Data/Managed</RimWorldPath>
+	</PropertyGroup>
+
+ 	<ItemGroup>
+	 	<!-- Mod -->
+	 	<Compile Include="../Source/**/*" />
+		
+	 	<!-- Rimworld -->
+	 	<Reference Include="$(RimWorldPath)/*.dll">
+			<Private>False</Private>
+		</Reference>
+
+	</ItemGroup>
+</Project>
