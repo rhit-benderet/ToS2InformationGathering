@@ -29,5 +29,12 @@
 			<Private>False</Private>
 		</Reference>
 
+		<Reference Include="../../../../BepInEx/plugins/*.dll">
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="../../../../BepInEx/core/0Harmony.dll">
+			<Private>False</Private>
+		</Reference>
+		<EmbeddedResource Include="../Resources/InformationGathering.modinfo.json" />
 	</ItemGroup>
 </Project>

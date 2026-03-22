@@ -1,0 +1,10 @@
+{
+  "HarmonyId": "oceanicoxen.informationgathering",
+  "DisplayName": "Information Gathering",
+  "Authors": [ "OceanicOxen"],
+  "Description": "Generates some useful information after each game for statistical testing.",
+  "Version": "1.0",
+  "RequiredMods": [],
+  "Settings": {
+  }
+}
