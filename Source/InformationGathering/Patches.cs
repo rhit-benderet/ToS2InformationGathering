@@ -104,6 +104,7 @@ public class Patches
 
 			myRole = (Role)getMyRole.Invoke(null, new object[] { /* parameters */ });
             
+            equippedScrolls.Clear();
             var equippedScrollsA = Service.Home.UserService.Inventory.GetEquippedScrolls();
             for (int i = 0; i < equippedScrollsA.Count; i++)
             {
